@@ -1,12 +1,16 @@
-## Hanna Pleshko
-
-![alt text](74094635.jpg)
-
-## Contact Information:
-- Email: anna-pleshko2000@mail.ru
-- Phone: +375291559155
-- Telegram: @hannapleshko
-- LinkedIn: [My Profile](https://www.linkedin.com/in/hanna-p-06853a203/)
+ <div style="display: flex; align-items: center;">
+        <div style="flex: 0 0 auto; margin-right: 20px;">
+            <img src="74094635.jpg" alt="alt text" width="250" />
+        </div>
+        <div>
+            <h2>Hanna Pleshko</h2>
+            <h3>Contact Information:</h3>
+            <p>Email: anna-pleshko2000@mail.ru</p>
+            <p>Phone: +375291559155</p>
+            <p>Telegram: @hannapleshko</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/hanna-p-06853a203/">My Profile</a></p>
+        </div>
+    </div>
 
 ## Briefly About Myself:
 - About 1 year of professional experience as a FullStack JavaScript/TypeScript developer.
