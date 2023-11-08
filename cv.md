@@ -1,5 +1,7 @@
 ## Hanna Pleshko
 
+![alt text](74094635.jpg)
+
 ## Contact Information:
 - Email: anna-pleshko2000@mail.ru
 - Phone: +375291559155
