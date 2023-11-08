@@ -1,16 +1,12 @@
- <div style="display: flex; align-items: center;">
-        <div style="flex: 0 0 auto; margin-right: 20px;">
-            <img src="74094635.jpg" alt="alt text" width="250" />
-        </div>
-        <div>
-            <h2>Hanna Pleshko</h2>
-            <h3>Contact Information:</h3>
-            <p>Email: anna-pleshko2000@mail.ru</p>
-            <p>Phone: +375291559155</p>
-            <p>Telegram: @hannapleshko</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/hanna-p-06853a203/">My Profile</a></p>
-        </div>
-    </div>
+# Hanna Pleshko
+
+<img src="74094635.jpg" alt="Hanna Pleshko" width="200"/>
+
+## Contact Information:
+- *Email:* anna-pleshko2000@mail.ru
+- *Phone:* +375291559155
+- *Telegram:* @hannapleshko
+- *LinkedIn:* [My Profile](https://www.linkedin.com/in/hanna-p-06853a203/)
 
 ## Briefly About Myself:
 - About 1 year of professional experience as a FullStack JavaScript/TypeScript developer.
@@ -28,14 +24,14 @@ multi-threading, concurrency, code refactoring, and thorough code reviews.
 practices in software development consistently
 
 ## Skills:
-- Programming Languages: JavaScript, TypeScript, PHP
-- Web Technologies:	Node.js, Express, React, Redux, Redux Toolkit, Redux Toolkit Query, jQuery, Bootstrap, React-Bootstrap, Material UI, Mantine, AG Grid, Mongoose, Jest, Mocha, swagger, HTML, CSS, LESS / SASS(SCSS), webpack, Babel, Bash, Docker
-- Application Servers: Node.js, Apache
-- Databases: PostgreSQL, MySQL, MSSQL, MongoDB, IBMdb2
+- *Programming Languages:* JavaScript, TypeScript, PHP
+- *Web Technologies:*	Node.js, Express, React, Redux, Redux Toolkit, Redux Toolkit Query, jQuery, Bootstrap, React-Bootstrap, Material UI, Mantine, AG Grid, Mongoose, Jest, Mocha, swagger, HTML, CSS, LESS / SASS(SCSS), webpack, Babel, Bash, Docker
+- *Application Servers:* Node.js, Apache
+- *Databases:* PostgreSQL, MySQL, MSSQL, MongoDB, IBMdb2
 
 ## Code example:
 A React component that displays a list of job vacancies, filters them based on a search string, and provides pagination for convenient navigation through the results.
-```
+```javascript
 import React, { useState, useEffect, useRef } from 'react';
 import { Pagination } from '@mantine/core';
 import Item from './Item';
