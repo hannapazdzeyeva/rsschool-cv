@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #DB9291;
+    --secondary-color: #2D3E5B;
+    --background-color: #F7F8F8;
+    --text-color: #242424;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,16 +18,12 @@ body {
     font-style: normal;
     line-height: normal;
     background: #FFF;
-    color: #242424;
-}
-
-.wrapper {
-    /* border: 1px solid black; */
+    color: var(--text-color);
 }
 
 :any-link {
     text-decoration: none;
-    color: #242424;
+    color: var(--text-color);
 }
 
 ol,
@@ -28,11 +31,27 @@ ul {
     list-style: none;
 }
 
+header,
+.skills,
+.code,
+.description,
+.experiences,
+.education,
+.language-skills,
+footer {
+    padding: 24px 24px 0;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
 header .preview {
     display: flex;
     align-items: center;
     gap: 30px;
-
 }
 
 header .portrait {
@@ -44,14 +63,9 @@ header .portrait {
 }
 
 header .preview h1 {
-    color: #2D3E5B;
+    color: var(--secondary-color);
+    ;
     font-size: 24px;
-}
-
-header .preview h2 {
-    color: #DB9291;
-    font-size: 12px;
-    text-transform: uppercase;
 }
 
 header .contacts {
@@ -59,7 +73,7 @@ header .contacts {
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin: 16px 0;
 }
 
 header .contacts a {
@@ -68,19 +82,8 @@ header .contacts a {
 
 .description {
     padding: 25px;
-    margin-top: 24px;
     border-radius: 10px;
-    background: #F7F8F8;
-}
-
-.skills {
-    margin-top: 24px;
-}
-
-.skills h3 {
-    color: #DB9291;
-    font-size: 12px;
-    text-transform: uppercase;
+    background: var(--background-color);
 }
 
 .skills .container {
@@ -90,37 +93,22 @@ header .contacts a {
     margin-top: 12px;
 }
 
-.code {
-    margin-top: 24px;
-}
-
-.code h3 {
-    color: #DB9291;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.code p {
-    margin-top: 12px;
-}
-
-.experiences {
-    margin-top: 24px;
-}
-
-.experiences h3 {
-    color: #DB9291;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.experiences .item {
+code p {
     margin-top: 12px;
 }
 
 .experiences .item {
+    margin-top: 12px;
     padding-bottom: 24px;
-    border-bottom: 2px solid #EDEDED;
+    border-bottom: 2px solid var(--background-color);
+}
+
+.experiences .career,
+.experiences .project div,
+.experiences .project ul,
+.education p,
+.language-skills p {
+    margin-top: 12px;
 }
 
 .experiences .career {
@@ -135,52 +123,10 @@ header .contacts a {
     gap: 20px;
 }
 
-.experiences .project {
-    margin-top: 12px;
-}
-
-.experiences .project div {
-    margin-top: 12px;
-}
-
-.experiences .project ul {
-    margin-top: 12px;
-}
-
-.education {
-    margin-top: 24px;
-}
-
-.education h3 {
-    color: #DB9291;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.education p {
-    margin-top: 12px;
-}
-
-
-.english {
-    margin-top: 24px;
-}
-
-.english h3 {
-    color: #DB9291;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.english p {
-    margin-top: 12px;
-}
-
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0px;
 }
 
 footer .github-icon {
