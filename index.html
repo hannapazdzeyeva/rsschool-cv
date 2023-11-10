@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <div class="preview">
+                <div class="portrait"></div>
+                <div>
+                    <h1>Hanna Pleshko</h1>
+                    <h2>Full Stack Developer</h2>
+                </div>
+            </div>
+            <div class="contacts">
+                <p>Email: anna-pleshko2000@mail.ru</p>
+                <p>Phone: +375291559155</p>
+                <p>Telegram: @hannapleshko</p>
+                <p><a href="https://www.linkedin.com/in/hanna-p-06853a203/">LinkedIn</a></p>
+            </div>
+        </header>
+
+        <main>
+            <section class="description">
+                <ul>
+                    <li>About 1 year of professional experience as a FullStack JavaScript/TypeScript developer.</li>
+                    <li>Skilled in back-end development with Express, Nest, LoopBack, and front-end technologies such as
+                        React, Redux, RTK, and RTK Query.</li>
+                    <li>Hands-on experience with client-server architectures, networking protocols, designing REST and
+                        SOAP
+                        APIs, web services development, and database access.</li>
+                    <li>Experienced in utilizing databases like PostgreSQL, MySQL, MongoDB, IBMdb2.</li>
+                    <li>Proficiently using testing frameworks like Jest and Mocha for ensuring reliable, high-quality
+                        code
+                        through rigorous unit tests for back-end functionality and integration tests for API endpoints.
+                    </li>
+                    <li>Skilled in deciphering existing codebases and documenting code using OpenAPI and Swagger.</li>
+                    <li>Considerable experience in object-oriented programming, implementing SOLID and REST principles,
+                        multi-threading, concurrency, code refactoring, and thorough code reviews.</li>
+                    <li>Possess strong skills in code refactoring, reviewing, maintaining code quality, and adhering to
+                        best
+                        practices in software development consistently.</li>
+                </ul>
+            </section>
+
+            <section class="skills">
+                <h3>Skills</h3>
+
+                <div class="container">
+                    <p>Programming Languages:</p>
+                    <p>JavaScript, TypeScript, PHP.</p>
+                    <p>Web Technologies:</p>
+                    <p>Node.js, Express, React, Redux, Redux Toolkit, Redux Toolkit Query, jQuery, Bootstrap,
+                        React-Bootstrap, Material UI, Mantine, AG Grid, Mongoose, Jest, Mocha, swagger, HTML, CSS, LESS
+                        / SASS(SCSS).</p>
+                    <p>Application Servers:</p>
+                    <p>Node.js, Apache.</p>
+                    <p>Databases:</p>
+                    <p>PostgreSQL, MySQL, MSSQL, MongoDB, IBMdb2.</p>
+
+                </div>
+            </section>
+
+            <section class="code">
+                <h3>Code example</h3>
+                <p>A React component that displays a list of job vacancies, filters them based on a search string, and
+                    provides pagination for convenient navigation through the results.</p>
+                <div>
+                    <pre><code>
+import React, { useState, useEffect, useRef } from 'react';
+import { Pagination } from '@mantine/core';
+import Item from './Item';
+import storage from '../../storage/storage.json';
+
+function List({ searchString }) {
+    const [list, setList] = useState(storage);
+    const [currentPage, setCurrentPage] = useState(1);
+    const pageSizeRef = useRef(4);
+
+    const filterVacancy = () =&gt; {
+        if (!searchString) return storage;
+        return storage.filter(({ vacancy }) =&gt; vacancy.toLowerCase().includes(searchString.toLowerCase()));
+    };
+
+    const paginatedList = filterVacancy().slice((currentPage - 1) * pageSizeRef.current, currentPage * pageSizeRef.current);
+
+    useEffect(() =&gt; {
+        setList(filterVacancy());
+    }, [searchString]);
+
+    return (
+        &lt;div&gt;
+            {paginatedList.map((el, index) =&gt; (
+                &lt;Item key={index} vacancyItem={el} /&gt;
+            ))}
+            &lt;Pagination
+            total={Math.ceil(list.length / pageSizeRef.current)}
+            value={currentPage}
+            onChange={(page) =&gt; setCurrentPage(page)}
+            position=&quot;center&quot;
+            /&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+                </div>
+            </section>
+
+            <section class="experiences">
+                <h3>Work Experience</h3>
+
+                <div class="item">
+                    <div class="career">
+                        <div>
+                            <p>IBA Group</p>
+                            <p>Full Stack Developer</p>
+                        </div>
+                        <p>April 2022 - November 2022</p>
+                    </div>
+                    <div class="project">
+                        <p>CV creator for company employees. An application comprising both client and server
+                            components. The primary objective is to streamline the resume creation process for easy
+                            editing and quick completion. The product facilitates uniform CV generation, conversion to
+                            DOC format, and storage.</p>
+                        <div>
+                            <p>Responsibilities:</p>
+                            <ul>
+                                <li>Front-end and back-end development.</li>
+                                <li>Designed and optimized database schemas to ensure - efficient data storage and
+                                    retrieval.</li>
+                                <li>Conducted unit tests to ensure code reliability and quality.</li>
+                                <li>Collaborated with the team in an Agile/Scrum environment to plan and execute project
+                                    sprints.</li>
+                                <li>Documented APIs using OpenAPI and Swagger to ensure clear and organized
+                                    documentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="career">
+                        <div>
+                            <p>IBA Group</p>
+                            <p>Node.js Developer</p>
+                        </div>
+                        <p>September 2021 - June 2022</p>
+                    </div>
+                    <div class="project">
+                        <p>Application program interface (API) that allows programmers to access Microsoft Exchange
+                            items such as calendars, contacts and email.</p>
+                        <div>
+                            <p>Responsibilities:</p>
+                            <ul>
+                                <li>Back-end development.</li>
+                                <li>Collaborated with Exchange Web Server to ensure seamless integration and interaction
+                                    with the API.</li>
+                                <li>Implemented middleware to validate SOAP request data.</li>
+                                <li>Conducted unit tests to ensure code reliability and quality.</li>
+                                <li>Collaborated with the team in an Agile/Scrum environment to plan and execute project
+                                    sprints.</li>
+                                <li>Documented APIs using OpenAPI and Swagger to ensure clear and organized
+                                    documentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="career">
+                        <div>
+                            <p>Pragma</p>
+                            <p>Full Stack Developer </p>
+                        </div>
+                        <p>February 2021 – August 2021</p>
+                    </div>
+                    <div class="project">
+                        <p>AMO Stock - an application tailored for amocrm, catering to individual entrepreneurs and
+                            managers who seek meticulous sales tracking and management.</p>
+                        <div>
+                            <p>Responsibilities:</p>
+                            <ul>
+                                <li>Developed and maintained the application, ensuring seamless integration with the
+                                    amocrm platform.</li>
+                                <li>Collaborated with the amocrm ecosystem to ensure a unified user experience and
+                                    smooth data flow.</li>
+                                <li>Collaborated with the team in an Agile/Scrum environment to plan and execute project
+                                    sprints.</li>
+                                <li>Participated in code reviews to maintain code quality and adhere to best practices
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="education">
+                <h3>Education</h3>
+
+                <p>Belarusian State University of Informatics and Radioelectronics, Faculty of Computer Design, 2022</p>
+                <p>NestJS Zero to Hero - Modern TypeScript Back-end Development, Udemy</p>
+                <p>Node.js: The Complete Guide to Build RESTful APIs, Udemy</p>
+                <p>Node.js Express - unit testing/integration tests with Jest, Udemy</p>
+                <p>Master SOLID principles and deep dive into advanced topics in software architecture, Udemy</p>
+            </section>
+
+            <section class="language-skills">
+                <h3>English</h3>
+
+                <p>English Pre-Intermediate (A2). But I'm actively improving it through courses and
+                    interactions with international clients.</p>
+            </section>
+        </main>
+
+        <footer>
+            <a class="my-github" href="https://github.com/hannapazdzeyeva">
+                <img class="github-icon" src="./icons/github.svg" alt="Github Icon" width="26" height="26">
+                <p>Visit my GitHub</p>
+            </a>
+            <p>© 2023</p>
+            <a href="https://rs.school/">
+                <img src="./icons/rsschool.svg" alt="Rsschool Icon" width="73" height="26">
+            </a>
+        </footer>
+    </div>
+</body>
+
+</html>
